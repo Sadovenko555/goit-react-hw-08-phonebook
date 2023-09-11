@@ -1,0 +1,32 @@
+header {
+  background-color: #f0f0f0;
+  padding: 20px 20px 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 460px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-container {
+  display: flex;
+  gap: 10px;
+}
+
+.navigation-link {
+  transition: color 250ms linear;
+  color: #333; 
+}
+
+.navigation-link:is(:hover, :focus) {
+  color: #2ca9bc; 
+}
+
+.navigation-link.active {
+  color: #2ca9bc;
+}

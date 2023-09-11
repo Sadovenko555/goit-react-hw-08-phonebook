@@ -1,21 +1,28 @@
+import { setFilter, getFilter } from 'redux/filter/sliceFilter';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter, getFilter } from '../../redux/filterSlice';
+import css from 'components/Filter/Filter.module.css';
 
-import './Filter.module.css';
+import React from 'react';
 
 export const Filter = () => {
-  const dispatch = useDispatch();
   const filter = useSelector(getFilter);
+  const dispatch = useDispatch();
+  const onFilterContacts = query => {
+    dispatch(setFilter(query.target.value));
+  };
 
   return (
-    <label>
-      <input
-        type="text"
-        name="filter"
-        value={filter}
-        onChange={e => dispatch(setFilter(e.target.value))}
-        placeholder="Find contacts by name"
-      />
-    </label>
+    <>
+      <label className={css.title}>
+        Find contact by name
+        <input
+          type="text"
+          value={filter}
+          name="filter"
+          onChange={onFilterContacts}
+          placeholder="Enter the filter value..."
+        />
+      </label>
+    </>
   );
 };

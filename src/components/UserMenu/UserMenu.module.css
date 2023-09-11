@@ -1,0 +1,35 @@
+.userMenu-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.username {
+  font-weight: 500;
+  color: #333; 
+}
+
+.icon {
+  height: 16px; 
+  width: 16px; 
+  fill: #333;
+}
+
+.logout-btn {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-left: 1px solid #ddd;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: transparent;
+  transition: color 250ms linear;
+}
+
+.logout-btn:is(:hover, :focus) {
+  color: #2ca9bc;
+}
